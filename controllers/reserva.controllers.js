@@ -63,17 +63,16 @@ ctrl.obtenerReserva = async (req, res) => {
 
 // Crear una reserva
 ctrl.crearReserva = async (req, res) => {
-  const { nombre, apellido, pelicula, fechaPelicula, sala, asiento, precio } =
-    req.body; // JSON.stringify(reserva);
+  const { nombre, apellido, pelicula, fecha, sala, asiento, precio } = req.body; // JSON.stringify(reserva);
 
   try {
     // Se crea una nueva instancia de reserva
     const nuevaReserva = new Reserva({
-      codigo: new Date().getTime(),
       nombre,
+      codigo: new Date().getTime(),
       apellido,
       pelicula,
-      fechaPelicula,
+      fecha,
       sala,
       asiento,
       precio,

@@ -2,7 +2,7 @@
 const { DataTypes, sequelize } = require("../database");
 
 const Reserva = sequelize.define(
-  "Reserva",
+  "reservas",
   {
     id: {
       type: DataTypes.INTEGER,
@@ -26,7 +26,7 @@ const Reserva = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    fechaPelicula: {
+    fecha: {
       type: DataTypes.DATE,
       allowNull: false,
     },
