@@ -9,7 +9,20 @@ const Reserva = sequelize.define(
       primaryKey: true,
       autoIncrement: true,
     },
-    Pelicula: {
+    codigo: {
+      type: DataTypes.STRING(100),
+      allowNull: false,
+      unique: true,
+    },
+    nombre: {
+      type: DataTypes.STRING(100),
+      allowNull: false,
+    },
+    apellido: {
+      type: DataTypes.STRING(100),
+      allowNull: false,
+    },
+    pelicula: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -17,20 +30,20 @@ const Reserva = sequelize.define(
       type: DataTypes.DATE,
       allowNull: false,
     },
-    HoraInicio: {
+    horaInicio: {
       type: DataTypes.TIME,
       allowNull: false,
     },
-    Sala: {
+    sala: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    Asiento: {
+    asiento: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true, // Restricción de unicidad para el asiento
     },
-    Precio: {
+    precio: {
       type: DataTypes.FLOAT,
       allowNull: false,
     },
