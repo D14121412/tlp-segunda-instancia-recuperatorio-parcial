@@ -1,30 +1,32 @@
 <%- include('partials/header') %>
 
-    <div class="container">
-
-        <div class="row mt-5">
-            <h1 class="text-center border-botton">Lista de Reservas</h1>
-            <div class="col">
-                <div class="col-md-3 mb-2">
-                    <a href="/reserva/crear" class="btn btn sm btn-primary" id>Nuevo </a>
-                    <a href="/" class="btn btn-info text-light">Inicio</a>
-                </div>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Columna 1</th>
-                            <th>Columna 2</th>
-                            <th>Columna 3</th>
-                            <th>Columna n</th>
-                        </tr>
-                    </thead>
-                    <tbody id="">
-          
-                    </tbody>
-                </table>
-            </div>
-        </div>
+<div class="container">
+  <div class="row mt-5">
+    <h1 class="text-center border-botton">Lista de Reservas</h1>
+    <div class="col">
+      <div class="col-md-3 mb-2">
+        <a href="/nueva-reserva" class="btn btn sm btn-primary" id>Nuevo </a>
+        <a href="/" class="btn btn-info text-light">Inicio</a>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Pelicula</th>
+            <th>Fecha</th>
+            <th>Sala</th>
+            <th>Asiento</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody id="listado"></tbody>
+      </table>
     </div>
+  </div>
+</div>
 
+<script src="listar-reservas.js"></script>
 
-    <%- include('partials/footer') %>
+<%- include('partials/footer') %>

@@ -19,11 +19,10 @@ const {
 // ==========================================
 
 // Vista para todas las reservas
-router.get("/lista-reservas", renderListaReservas);
+router.get("/", renderListaReservas);
 
 // Formulario para crear una reserva
 router.get("/nueva-reserva", renderFormNuevaReserva);
-router.get("/api/:id", obtenerReserva);
 
 // Formulario para editar una reserva
 router.get("/editar-reserva/:id", renderFormEditarReserva);
@@ -40,6 +39,7 @@ router.post("/api/", crearReserva);
 
 // Actualizar una reserva
 router.put("/api/:id", actualizarReserva);
+router.get("/api/:id", obtenerReserva);
 
 // Eliminar una reserva de forma lógica
 router.delete("/api/:id", eliminarReserva);
